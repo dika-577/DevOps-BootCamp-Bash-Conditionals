@@ -3,10 +3,10 @@
 # Place your code here
  if [[ "$1" == *"C" ]]; then
    temp=$(echo "$1" | sed 's/C//')
-   kelvins=$(echo "$temp + 273" | bc)
+   kelvins=$(("$temp + 273"))
    echo "${kelvins}K"
  elif [[ "$1" == *"K" ]]; then
    temp=$(echo "$1" | sed 's/K//')
-   celsius=$(echo "$temp - 273" | bc)
+   celsius=$(("$temp - 273"))
    echo "${celsius}C"
  fi
